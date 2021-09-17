@@ -1,0 +1,12 @@
+balon.png
+aguila.png
+perico.png
+buho.png
+tierra.png
+cangrejo.png
+leon.png
+huella.png
+panda.png
+conejo.png
+mariposa.png
+sol.png

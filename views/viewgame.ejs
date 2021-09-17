@@ -1,0 +1,60 @@
+
+<div class="field is-grouped">
+  <div class="control">
+    <div class="tags has-addons">
+      <span class="tag is-link is-light">Intentos: </span>
+      <span id="clicks" class="tag is-warning">0</span>
+    </div>
+  </div>
+
+  <div class="tags has-addons">
+      <span class="tag">Tiempo: </span>
+      <span id="crono" class="tag is-primary">00:00:00</span>
+  </div>
+</div>
+
+
+<div class="columns">
+  <% let contimg= 0 %>
+  <% let name = "" %>
+  <% let src= "/imgs/" %>
+  <% for(let i=1; i<=columnas; i++){ %>
+    <div class="column is-narrow">
+      <% for(let j=1; j<=filas; j++){ %>
+        <% src= src + imgnames[contimg] %>
+        <% contimg++ %>
+        <div id="<%=claseid[contimg-1] %>-<%=contimg %>" onclick="clickID(this)" class="box card-container">
+          <div id="<%=claseid[contimg-1] %><%=contimg %>thecard" class="thecard">
+              
+              <div id="<%=claseid[contimg-1] %>-<%=contimg %>-theback" class="theback">
+                <img id="img<%=claseid[contimg-1] %><%=contimg %>" class="imgclick"  src="<%= src %>" >
+              </div>
+
+              <div id="<%=claseid[contimg-1] %>-<%=contimg %>-thefront" class="thefront">
+                  <img id="img<%=contimg %>" class="imgclick"  src="/questions.png" >
+              </div>
+
+          </div>
+          <br>
+        </div>
+        <% src= "/imgs/" %>
+      <% } %>
+    </div>
+  <% } %>
+</div>
+
+<button class="button is-info" onclick="location.reload()">Jugar de nuevo</button>
+<button class="button is-info" onclick="inicio()">Cambiar nivel</button>
+
+<!--MENSAJE FINALIZACION JUEGO-->
+<div class="container-msg-disabled">
+  <div id="msg-finish">
+    <p class="title is-1"></p>
+    <h4 class="title is-4">Felicidades &#128521, lo lograste!</h4>
+    <img src="/ganaste.gif">
+    <p id="result" class="subtitle is-5">Tiempo &rarr; intentos</p>
+    <button class="button is-info" onclick="location.reload()">Juega otra vez!</button>
+  </div>
+  <p class="subtitle is-6"></p>
+  <p class="subtitle is-6"><b>Juego elaborado por: Rafa Gutiérrez</b><br>&copy 2021: Todos los derechos reservados.</p>
+</div>

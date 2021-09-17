@@ -1,0 +1,142 @@
+.left_align {
+text-align: left;
+}
+
+.right_align {
+text-align: right;
+}
+
+.center_align {
+text-align: center;
+}
+
+.flex {
+display: flex;
+position: relative;
+justify-content: center;
+justify-items: center;
+}
+
+.flex_space_between {
+display: flex;
+position: relative;
+justify-content: space-around;
+}
+
+
+.app_container {
+width: 550px;
+text-align: center;
+}
+
+.logo {
+height: 80px;
+width: 330px;
+
+}
+
+.content-logo{
+text-align: center;
+}
+
+
+.new_padding {
+padding: 0px;
+padding-top: 3px;
+padding-bottom: 3px;
+}
+
+.imgclick{
+  border-radius: 10px;
+  cursor: pointer;
+  perspective: 1000px;
+}
+
+.card-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  flex-wrap: wrap;
+  transform-style: preserve-3d;
+  width: 100px;
+  height:100px;
+}
+
+.card-container img {
+  width: 10rem;
+}
+
+/* THE CARD HOLDS THE FRONT AND BACK FACES */
+.thecard{
+  perspective: 1000px;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+.selected img{
+  /*front*/
+  visibility: hidden;
+}
+
+.desactived img{
+  /*front*/
+  visibility: hidden;
+}
+
+.disable img{
+  filter: grayscale(80%);
+}
+
+
+.click{
+  transition: all 0.8s ease;
+  transform: rotateY(180deg);
+}
+
+.normalized{
+  transition: all 0.8s ease;
+}
+
+
+.visible img{
+  backface-visibility: visible;
+}
+/* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
+ .thefront{
+  grid-area: 1 / 1;
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  padding-bottom: 10px;
+  backface-visibility: hidden;
+}
+
+/* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
+.theback{
+  grid-area: 1 / 1;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  padding-top: 12px;
+  text-align: center;
+}
+
+
+.container-msg-finish{
+  display: block;
+  position: absolute;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  right: 1cm;
+  left: 1cm;
+  background-color: rgb(238, 248, 248);
+  border-radius: 10px;
+  border-style: solid;
+  border-color: rgb(177, 177, 214);
+}
+
+.container-msg-disabled{
+  display: none;
+}
