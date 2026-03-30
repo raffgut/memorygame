@@ -15,3 +15,5 @@ COPY . /app
 
 # Expone el puerto donde corre tu aplicación
 EXPOSE 3030
+
+CMD ["npm",  "start"]
